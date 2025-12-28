@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #141e30, #243b55);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            width: 420px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #00ffd5;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        .score {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffd700;
+            margin-top: 15px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 25px;
+            text-decoration: none;
+            background: #00ffd5;
+            color: #000;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background: #00c9a7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Prediction Result</h1>
+
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Subject:</strong> {{ subject }}</p>
+
+        <div class="score">
+            Predicted Score: {{ prediction }}
+        </div>
+
+        <a href="/">Predict Again</a>
+    </div>
+</body>
+</html>
